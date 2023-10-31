@@ -1,0 +1,29 @@
+
+
+NET "selector[2]" IOSTANDARD = LVCMOS33;
+NET "selector[1]" IOSTANDARD = LVCMOS33;
+NET "selector[0]" IOSTANDARD = LVCMOS33;
+NET "step[1]" IOSTANDARD = LVCMOS33;
+NET "step[0]" IOSTANDARD = LVCMOS33;
+
+NET "selector[0]" LOC = V8;
+NET "selector[1]" LOC = U10;
+NET "selector[2]" LOC = U8;
+NET "clk" LOC = E12;
+
+
+NET "clk" IOSTANDARD = LVCMOS33; PERIOD = 20.000;
+
+# PlanAhead Generated IO constraints 
+
+NET "output123[3]" IOSTANDARD = LVCMOS33;
+NET "output123[2]" IOSTANDARD = LVCMOS33;
+NET "output123[1]" IOSTANDARD = LVCMOS33;
+NET "output123[0]" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "leds[3]" LOC = U19;
+NET "leds[2]" LOC = U20;
+NET "leds[1]" LOC = T19;
+NET "leds[0]" LOC = R20;
