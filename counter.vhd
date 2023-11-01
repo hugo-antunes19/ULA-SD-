@@ -35,10 +35,10 @@ component ULA is
 end component;
 
 -- Steps:
--- #00: Show inputV1
--- #01: Show inputV2
--- #02: Show Results
--- #03: Show Flags
+-- #00: mostra inputV1
+-- #01: mostra inputV2
+-- #02: mostra Results
+-- #03: mostra Flags
 
 -- CountVector
 SIGNAL counterVector : UNSIGNED (7 downto 0) := "00000000";
@@ -87,8 +87,8 @@ begin
 if (clk'event and clk = '1') then
 
 -- cada if retornará algo diferente, ou seja,
--- uma hora retornará o número x, outra hora o y
--- outra hora o output e os flags
+-- '00' retornará o número x, '01' o y
+-- '10' o output e '11' os flags
 
 	if ( showSteps = 0 ) then -- Input1
 		leds <= inputV1;
@@ -96,7 +96,7 @@ if (clk'event and clk = '1') then
 	elsif ( showSteps = 1) then -- Input2
 		leds <= inputV2;
 		step <= "01";
-	elsif ( showSteps = 2 ) then -- Result
+	elsif ( showSteps = 2 ) then -- output
 		leds <= outputVector;
 		step <= "10";
 	elsif ( showSteps = 3 ) then -- Flags
