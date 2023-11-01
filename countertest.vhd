@@ -30,15 +30,18 @@ ARCHITECTURE behavior OF counter_test IS
     END COMPONENT;
     
 
-   --Inputs
+	--Inputs
+	
    signal selector : std_logic_vector(2 downto 0) := (others => '0');
    signal clk : std_logic := '0';
 
- 	--Outputs
+	--Outputs
+
    signal step : std_logic_vector(1 downto 0);
    signal leds : std_logic_vector(3 downto 0);
 
-   -- Clock period definitions
+   	-- Clock period definitions
+
    constant clk_period : time := 10 ns;
  
 BEGIN
