@@ -18,8 +18,6 @@ END counter_test;
  
 ARCHITECTURE behavior OF counter_test IS 
  
-    -- Component Declaration for the Unit Under Test (UUT)
- 
     COMPONENT counter
     PORT(
          selector : IN  std_logic_vector(2 downto 0);
@@ -40,13 +38,12 @@ ARCHITECTURE behavior OF counter_test IS
    signal step : std_logic_vector(1 downto 0);
    signal leds : std_logic_vector(3 downto 0);
 
-   	-- Clock period definitions
+   	-- Clock
 
    constant clk_period : time := 10 ns;
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
    uut: counter PORT MAP (
           selector => selector,
           clk => clk,
@@ -54,7 +51,7 @@ BEGIN
           leds => leds
         );
 
-   -- Clock process definitions
+   -- Definição do clock
    clk_process :process
    begin
 		clk <= '0';
@@ -64,10 +61,10 @@ BEGIN
    end process;
  
 
-   -- Stimulus process
+   -- stim processo
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
+      
       wait for 100 ns;	
 
       wait;
