@@ -23,6 +23,7 @@ SIGNAL resultshift : STD_LOGIC;
 
 -- O shift sendo realizado abaixo
 -- não alteramos o bit de sinal no shift
+-- fixamos o '0' como entrada no primeiro bit
 
 begin
 
