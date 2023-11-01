@@ -34,8 +34,8 @@ vasco(0) <= y(3);
 vasco(1) <= x(3);
 
 -- Fazemos as operações lógicas para calcular a comparação devidamente
--- ig é a variável que retorna 1 caso os números sejam iguais
--- a3 retorna 1 caso o número x seja maior
+-- ig é igual a 1 caso os números sejam iguais
+-- a3 é igual a 1 caso o número x seja maior
 
 ig <= (x(3) XNOR y(3)) AND (x(2) XNOR y(2)) AND (x(1) XNOR y(1)) AND (x(0) XNOR y(0));
 a2 <= (x(2) XOR y(2)) and (NOT x(2));
