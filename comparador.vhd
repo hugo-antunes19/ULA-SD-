@@ -43,7 +43,7 @@ a1 <= (x(1) XOR y(1)) and (NOT x(1)) and NOT((x(2) XOR y(2)) AND NOT a2);
 a0 <= (x(0) XOR y(0)) and (NOT x(0)) and NOT((x(1) XOR y(1)) AND NOT a1);
 a3 <= (a2) or (a1 AND NOT a2) or ((a0 AND NOT a1)AND NOT a2);
 
--- resultado(3) -> iguais
+-- resultado(2) -> iguais
 -- resultado(1) -> y maior 
 -- resultado(0) -> x maior 
 
