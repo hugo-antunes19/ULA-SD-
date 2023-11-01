@@ -10,8 +10,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 -- Para transformar um número em complemento a dois:
--- Inverte ( x = NOT x )
--- E soma um ( addOne)
+-- Inverte ( xi = NOT xi )
+-- E soma um (addOne)
 
 entity twosComplementer is
     Port ( x : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -33,7 +33,7 @@ component addOne is
            sum : out  STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
--- Criação das variáveis temporárias
+-- criação das variáveis temporárias
 
 SIGNAL sumAdder : STD_LOGIC;
 SIGNAL coutAdder : STD_LOGIC;
@@ -44,7 +44,7 @@ SIGNAL notX : STD_LOGIC_VECTOR(3 downto 0);
 
 
 begin
-
+	-- invertendo o 'x'
 	notX <= NOT x;
 	label3: addOne port map (notX,coutAdder,zeroFlagAdder, signFlagAdder, ovFlagAdder, output);
 
