@@ -21,7 +21,7 @@ end fourBitSubtractor;
 
 architecture Behavioral of fourBitSubtractor is
 
--- Operação declarada assumindo que seja ( X - Y )
+-- Operação declarada assumindo que seja (X + (-Y))
 -- Vale lembrar que a subtração nada mais é que a soma de um número negativo
 -- Para transformar o número y em negativo basta passarmos ele para complemento a dois
 
@@ -60,8 +60,6 @@ SIGNAL borrowFlagComp : STD_LOGIC;
 SIGNAL complemented : STD_LOGIC_VECTOR (3 downto 0);
 SIGNAL complemented1 : STD_LOGIC_VECTOR (3 downto 0);
 SIGNAL subtraido_1: STD_LOGIC_VECTOR (3 downto 0);
-SIGNAL R1: STD_LOGIC_VECTOR (3 downto 0);
-SIGNAL R2: STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 
