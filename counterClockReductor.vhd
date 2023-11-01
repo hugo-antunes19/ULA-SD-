@@ -4,6 +4,8 @@
 -- 
 -- Create Date:    31/10/2023 
 -- Module Name:    counterClockReductor - Behavioral 
+-- Nota: A única diferença entre counterClockReductor e o counter é a utilização
+--	 do limitante mencionado no final desse txt.
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -32,10 +34,10 @@ component ULA is
 end component;
 
 -- Steps:
--- #00: Show inputV1
--- #01: Show inputV2
--- #02: Show Results
--- #03: Show Flags
+-- #00: mostra inputV1
+-- #01: mostra inputV2
+-- #02: mostra Results
+-- #03: mostra Flags
 
 -- CountVector
 SIGNAL counterVector : UNSIGNED (7 downto 0) := "00000000";
