@@ -31,10 +31,11 @@ SIGNAL carries : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL FA : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
-  
-	-- Aqui utilizamos um outro módulo (o fullAdder) que faz a operação bit a bit
-	-- Nesse módulo, fazemos a soma de 4 bits, que é o mesmo de fazer a soma bit a bit
-	-- Portanto, declaramos os labels e suas saídas da forma abaixo.
+
+-- Aqui utilizamos um outro módulo (o fullAdder) que faz a operação bit a bit.
+-- Nesse módulo, fazemos a soma de 4 bits, que é o mesmo de fazer a soma bit a bit
+-- quatro vezes.
+-- Portanto, declaramos os labels e suas saídas da forma abaixo.
 
   FA_0: fullAdder port map (x(0), y(0), cin, carries(0), FA(0));
   FA_1: fullAdder port map (x(1), y(1), carries(0), carries(1), FA(1));
